@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Hearing!</title>
+    <title>Tech Vividh!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
     </script>
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <h1>Hearing</h1>
+    <h1>Tech Vividh</h1>
     <div class="intro">
       <center>
         <img src="banner.png" height="80"/> 
@@ -103,7 +103,7 @@
   
           <div class="optionsLeft">
             <p id="rangeText">Move the following bar to control <b>the frequency</b>:</p>
-            <input type="range" name="" id="rangeLeftFrec" min="150" max="10000">
+            <input type="range" name="" id="rangeLeftFrec" min="20" max="20000">
   
             <p id="rangeText">And, with this bar, you can control <b>the volume</b>:</p>
             <input type="range" name="" id="rangeLeftVol" min="0" max="100">
@@ -126,7 +126,7 @@
   
           <div class="optionsRight">
             <p id="rangeText">Move the next bar to control <b>the frequency</b>:</p>
-            <input type="range" name="" id="rangeRightFrec" min="150" max="10000">
+            <input type="range" name="" id="rangeRightFrec" min="20" max="20000">
   
             <p id="rangeText">And, with this bar, you can control <b>the volume</b>:</p>
             <input type="range" name="" id="rangeRightVol" min="0" max="100">
@@ -157,10 +157,20 @@
         <br/><br/><br/>
         <div>
           <center>
-            <audio controls>
-              <source src="test.mp3" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
+            <div id="audioPanel">
+              <div class="albumTitle">
+                <h3 style="display: inline-block;">Play Relaxed Music</h3>
+                <button id="playprev" class="playerBtn"><i class="fa fa-arrow-left"></i></button>
+                <select id="playlist">
+                  <option data-mp3="test1.mp3">Sample 1</option>
+                  <option data-mp3="test2.mp3">Sample 2</option>
+                  <option data-mp3="test3.mp3">Sample 3</option>
+                  <option data-mp3="test4.mp3">Sample 4</option>
+                  <option data-mp3="test5.mp3">Sample 5</option>
+                </select>
+                <button id="playnext" class="playerBtn"><i class="fa fa-arrow-right"></i></button>
+                <div id="playerWrap" class="playerWrap"><audio id="audio" controls></audio></div>
+            </div>
           </center>
         </div>
       </div>
@@ -168,5 +178,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="play.js"></script>
   </body>
 </html>
