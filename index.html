@@ -7,11 +7,33 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+      label {
+        background-color: indigo;
+        color: white;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
+    <div id="google_translate_element" style="float: right;"></div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <h1>Hearing</h1>
     <div class="intro">
-      
+      <center>
+        <img src="banner.png" height="150"/> 
+      </center>
       <br>
       <h2>What is this website about?</h2>
       <p>Tinitis is a disorder in which a person hears a beep of a certain frequency constantly in one or both ears. Against the popular belief that "it's not that bad," this website tries to show that it's not like that.</p>
@@ -21,6 +43,49 @@
       <p>At this point, the user without tinnitus will be ready to put on the headphones and will hear someone with tinnitus.
       </p>
       <br>
+      <h2>Developed By:</h2>
+      <table>
+        <tr>
+          <td>Team Leader</td>
+          <td>:</td>
+          <td style="color:red">Devi Sriya Miriyala</td>
+        </tr>
+        <tr>
+          <td>Member1</td>
+          <td>:</td>
+          <td style="color:red">Girijala Veera Venkata Jayasri</td>
+        </tr>
+        <tr>
+          <td>Member2</td>
+          <td>:</td>
+          <td style="color:red">Chintapalli Vyshnavi</td>
+        </tr>
+        <tr>
+          <td>Member3</td>
+          <td>:</td>
+          <td style="color:red">Chevula Geetha Manogna</td>
+        </tr>
+        <tr>
+          <td>Member4</td>
+          <td>:</td>
+          <td style="color:red">Eka Phanindra Lakshmi Narasimha</td>
+        </tr>
+        <tr>
+          <td>Member5</td>
+          <td>:</td>
+          <td style="color:red">Kankata Venkat Sai</td>
+        </tr>
+        <tr>
+          <td>Mentor</td>
+          <td>:</td>
+          <td style="color:red">K. Mallikarjuna Rao</td>
+        </tr>
+        <tr>
+          <td>Mentor</td>
+          <td>:</td>
+          <td style="color:red">Dr. Sarala Patchala</td>
+        </tr>
+      </table>
       <button id="letsStart">¡Lets Start!</button>
     </div>
 
@@ -84,10 +149,20 @@
           <p>Then, others will be able to hear what you always hear.</p>
         </div>
         <br>
-        <button id="finalButton">Start</button>
+        <button id="finalButton">Show</button>
         <br>
         <br>
-        <div class="show-frequency" style="display: none;"></div>
+        <div class="show-frequency" style="display: none;">
+        </div>
+        <br/><br/><br/>
+        <div>
+          <center>
+            <audio controls>
+              <source src="test.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </center>
+        </div>
       </div>
       
     </div>
