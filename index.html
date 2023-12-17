@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hearing!</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hearing</h1>
+    <div class="intro">
+      
+      <br>
+      <h2>What is this website about?</h2>
+      <p>Tinitis is a disorder in which a person hears a beep of a certain frequency constantly in one or both ears. Against the popular belief that "it's not that bad," this website tries to show that it's not like that.</p>
+      <br>
+      <h2>How does it work?</h2>
+      <p>To begin with, a person with tinnitus must put on the headphones and press the "start" button. At that moment, a frequency will begin to sound. Through the bottom bar, you can change the frequency you hear. The moment you stop hearing the sound, you must move the sound bar until you hear it again. The process must be repeated for the other ear.</p>
+      <p>At this point, the user without tinnitus will be ready to put on the headphones and will hear someone with tinnitus.
+      </p>
+      <br>
+      <button id="letsStart">¡Lets Start!</button>
+    </div>
+
+    <div class="interface">
+      <br>
+      <div class="config">
+        <div class="left">
+          <div class="instructions">
+            <p>Let's start with the left ear.</p>
+            <p>Press "start" to begin. Move the bar to change the frequency.</p>
+            <p>When you can no longer hear the frequency through your left ear, press "forward."</p>
+          </div>
+          
+          <button id="startLeft">Start</button>
+  
+          <div class="optionsLeft">
+            <p id="rangeText">Move the following bar to control <b>the frequency</b>:</p>
+            <input type="range" name="" id="rangeLeftFrec" min="150" max="10000">
+  
+            <p id="rangeText">And, with this bar, you can control <b>the volume</b>:</p>
+            <input type="range" name="" id="rangeLeftVol" min="0" max="100">
+  
+            <button id="stopLeft">Stop</button>
+            <button id="restartLeft" style="display: none;">Play Again</button>
+  
+            <button id="forwardLeftFrec">Forward</button>
+            <br>
+            <div class="show-frequency-left"></div>
+          </div>
+  
+        </div>     
+        <div class="right">
+          <div class="instructions">
+            <p>Let's start with the right ear.</p>
+            <p>Press "start" to begin. Move the bar to change the frequency.</p>
+            <p>When you can no longer hear the frequency through your right ear, press "forward."</p>
+          </div>
+  
+          <div class="optionsRight">
+            <p id="rangeText">Move the next bar to control <b>the frequency</b>:</p>
+            <input type="range" name="" id="rangeRightFrec" min="150" max="10000">
+  
+            <p id="rangeText">And, with this bar, you can control <b>the volume</b>:</p>
+            <input type="range" name="" id="rangeRightVol" min="0" max="100">
+  
+            <button id="stopRight">Stop</button>
+            <button id="restartRight" style="display: none;">Play Again</button>
+  
+            <button id="forwardRightFrec">Forward</button>
+            <br>
+            <div class="show-frequency-right"></div>
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="instructions">
+          <p>Perfect! Everything is ready.</p>
+          <p>Now, give the headphones to someone else. When it's ready, press "start."</p>
+          <p>Then, others will be able to hear what you always hear.</p>
+        </div>
+        <br>
+        <button id="finalButton">Start</button>
+        <br>
+        <br>
+        <div class="show-frequency" style="display: none;"></div>
+      </div>
+      
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
