@@ -134,6 +134,14 @@ function final() {
   show.innerHTML = 
   `<p>Left: ${leftFrec} Hz i ${leftSound} of volume</p>
    <p>Right: ${rightFrec} Hz i ${rightSound} of volume</p>`
+  
+   try {
+    rightOscillator.disconnect(rightGain);
+    leftOscillator.disconnect(leftGain);
+  } catch (e) {
+    console.log('Uh... Something has gone wrong');
+  }
+  
 }
 
 
