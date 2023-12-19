@@ -4,6 +4,7 @@ _player = document.getElementById("audio"),
 _playlist = document.getElementById("playlist"),
 _playprev = document.getElementById("playprev"),
 _playnext = document.getElementById("playnext");
+document.getElementById('sampleVol').addEventListener("change", changeVolume);
 
 var isPlaying = false;
 
@@ -86,6 +87,12 @@ _playlist.addEventListener("change", function(e) {
     playOption(e.target.options[e.target.selectedIndex], !getIsPlaying(_player));
   }
 });
+
+function changeVolume() {
+    let sampleVol = document.getElementById('sampleVol').value;
+    sampleVol=sampleVol/1000;
+    _player.volume=sampleVol;
+}
 
 selectionChanged(_playlist);
 //Get the first song loaded but paused
