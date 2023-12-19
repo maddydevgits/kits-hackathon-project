@@ -22,6 +22,7 @@
         if (batteryLevel < 0) {
           clearInterval(intervalId); // Stop the interval when the battery level is negative
           document.getElementById('batteryStatus').innerText = 'Battery Level: 0%'; // Set to 0% if it goes below
+          batteryLevel=100;
         }
       }
 
