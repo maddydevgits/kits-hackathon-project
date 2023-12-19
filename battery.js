@@ -27,8 +27,7 @@
       }
 
       // Call updateBatteryStatus every minute
-      const intervalId = setInterval(updateBatteryStatus, 60000);
-
+      const intervalId =setTimeout(updateBatteryStatus, 60000);
       // Initial call to update battery status immediately
       updateBatteryStatus();
     });
