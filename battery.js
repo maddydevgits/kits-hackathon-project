@@ -64,7 +64,7 @@
     for(let i=0;i<100;i++) {
         document.getElementById('batteryStatus').innerText = `Battery Level: ${batteryLevel}%`;
         batteryLevel--;
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Adjust the delay as needed
+        await new Promise(resolve => setTimeout(resolve, 60000)); // Adjust the delay as needed
 
     }
     
