@@ -20,6 +20,12 @@ const result = document.querySelector('.result');
 const optionsLeft = document.querySelector('.optionsLeft');
 const optionsRight = document.querySelector('.optionsRight');
 
+//Name and Email
+
+const name = document.getElementById('name').addEventListener("change",(e)=>{e.preventDefault();localStorage.setItem('name',e.target.value)});
+const email = document.getElementById('email').addEventListener("change",(e)=>{e.preventDefault();localStorage.setItem('email',e.target.value)})
+
+
 const show = document.querySelector('.show-frequency');
 
 window.addEventListener("load", start);
@@ -35,10 +41,10 @@ document.getElementById('rangeRightVol').addEventListener("change", changeVolume
 finalButton.addEventListener('click', final);
 
 // Variables globals
-leftFrec = 0;
-rightFrec = 0;
-leftSound = 0.3;
-rightSound = 0.3;
+var leftFrec = 0;
+var rightFrec = 0;
+var leftSound = 0.3;
+var rightSound = 0.3;
 
 function start() {
   try{
@@ -52,6 +58,9 @@ function start() {
 
 
 function startFrequenciaLeft() {
+  var form = document.getElementById('form')
+
+  form.style.display='none'
   let rangeLeftFrec = document.getElementById('rangeLeftFrec').value;
   
   leftOscillator = audioContext.createOscillator();
@@ -138,6 +147,9 @@ function final() {
    try {
     rightOscillator.disconnect(rightGain);
     leftOscillator.disconnect(leftGain);
+    axios.post('https://tech-vividh.onrender.com/sendmail',{name:localStorage.getItem('name'),email:localStorage.getItem('email'),data:{leftFrequency:leftFrec,rightFrequency:rightFrec,leftSound:leftSound,rightSound:rightSound}})
+    .then(res=>{alert(JSON.stringify(res.data))})
+    .catch(err=>{alert(JSON.stringify(err))})
   } catch (e) {
     console.log('Uh... Something has gone wrong');
   }
@@ -205,3 +217,4 @@ forwardRightFrec.addEventListener('click', function() {
   result.style.display = 'inline';
   console.log(leftFrec + "\n" + rightFrec + "\n" + leftSound + "\n" + rightSound);
 });
+
